@@ -201,6 +201,7 @@ strong {
 .itemSectionWithImage img {
     border: 2px solid #5de8d300;
     border-radius: 5px;
+    width: 150px;
 }
 
 .itemSectionWithImage:hover img {
@@ -267,6 +268,15 @@ strong {
 
     .itemSectionWithImage {
         display: block;
+    }
+
+    .itemSectionWithImage .sectionHeading {
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    .itemSectionWithImage img {
+        width: 100%;
     }
 
     .sectionHeading {
