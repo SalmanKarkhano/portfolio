@@ -1,0 +1,287 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    /* height: 100%; */
+    background: #0F172A;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    position: relative;
+}
+
+.gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #111E41 0%, transparent 20%);
+    pointer-events: none;
+    /* z-index: 0; */
+    /* Keep it in the background */
+}
+
+.gradient-container {
+    /* position: relative; */
+    /* Stack above the gradient */
+    /* z-index: 1; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Ensure sticky element aligns correctly */
+    height: auto;
+    /* Ensure enough height for scrolling */
+}
+
+.box {
+    flex: 1;
+    /* text-align: center; */
+}
+
+.box:first-child {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    /* Prevent stretching */
+    padding-top: 100px;
+    height: fit-content;
+    /* Let it fit its content */
+}
+
+.box:last-child {
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 100px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    cursor: pointer;
+    text-align: left;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: auto;
+    color: rgb(255, 255, 255);
+
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 0px 10px 0px;
+
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 200;
+    margin: auto;
+}
+
+p {
+    font-size: 17px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 130px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.menu-item span {
+    margin-left: 10px;
+}
+
+.menu-item::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    transition: width 0.3s ease-out;
+}
+
+.menu-item:hover::before {
+    transition: width 0.3s ease;
+    width: 50px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-item.active {
+    color: #ffffff;
+}
+
+.menu-item.active::before {
+    background-color: #ffffff;
+}
+
+strong {
+    font-weight: 400;
+    color: rgb(255, 255, 255, 0.9);
+}
+
+.buttonBox {
+    background-color: rgba(78, 255, 255, 0.1);
+    color: #5DE8D2;
+    padding: 5px;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 300;
+    padding-right: 10px;
+    padding-left: 10px
+}
+
+.itemSection {
+    border-top: 2px solid rgba(255, 255, 255, 0.151);
+    padding: 20px;
+    border-radius: 10px;
+    padding-left: 50px;
+    margin: 20px;
+    padding-bottom: 30px;
+
+}
+
+.itemSectionWithImage {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    padding-bottom: 30px;
+
+}
+
+.itemSectionWithImage:hover {
+    background-color: rgba(255, 255, 255, 0.041);
+    cursor: pointer;
+
+}
+
+.itemSectionWithImage img {
+    border: 2px solid #5de8d300;
+    border-radius: 5px;
+}
+
+.itemSectionWithImage:hover img {
+    border: 2px solid gray;
+}
+
+.itemSection:hover {
+    background-color: rgba(255, 255, 255, 0.041);
+    border-top: 2px solid #5DE8D2;
+    cursor: pointer;
+
+}
+
+.itemSection:hover .sectionHeading {
+    color: #5DE8D2;
+}
+
+.sectionHeading {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .box {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .menu {
+        display: none;
+
+    }
+
+    .buttonBox {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .itemSection {
+        padding: 15px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        margin: 15px;
+    }
+
+
+    .sectionHeading {
+        font-size: 16px;
+    }
+
+
+    .box:first-child {
+        position: relative;
+        top: 0;
+        align-self: flex-start;
+        padding-top: 50px;
+        height: fit-content;
+    }
+
+    .box:last-child {
+        padding: 0px;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
