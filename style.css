@@ -237,6 +237,14 @@ strong {
     font-weight: 100;
 }
 
+.contactSection{
+    text-align: center!important;
+    background-color: #5DE8D2;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    margin-top: 50px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 

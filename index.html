@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <section class="gradient-container">
         <div class="container">
             <div class="box">
-                <img src="images/logo.svg" alt="ItsSalmanLogo" class="logo" >
+                <img src="images/logo.svg" alt="ItsSalmanLogo" class="logo">
                 <h1>
                     Muhammad Salman
                 </h1>
@@ -140,8 +140,8 @@
                         </div>
                     </div>
                     <div class="itemSectionWithImage">
-                        <div><img src="images/kpbusinessexpo_thumbnail.png" alt="Image.jpg"
-                                style="margin-right: 20px;"></div>
+                        <div><img src="images/kpbusinessexpo_thumbnail.png" alt="Image.jpg" style="margin-right: 20px;">
+                        </div>
                         <div>
                             <h3 class="sectionHeading">KP Business Expo 2023 </h3>
                             <p> Designed and developed a dedicated website for the KP Business Expo, a prestigious event
@@ -154,11 +154,36 @@
                             <a class="buttonBox" href="">Couriers</a>
                         </div>
                     </div>
+                    <div class="itemSectionWithImage">
+                        <div><img src="images/enlightlab_thumbnail.png" alt="Image.jpg" style="margin-right: 20px;">
+                        </div>
+                        <div>
+                            <h3 class="sectionHeading">The Enlight Lab Website</h3>
+                            <p> Designed and developed the official website for The Enlight Lab, a non-profit
+                                organization focused on empowering youth through democracy, heritage, and technology.
+                                The platform embodies their mission to tackle social inequality and foster a movement
+                                for equity, diversity, and justice.
+                            </p>
+                            <a class="buttonBox" href="">Ecommerce</a>
+                            <a class="buttonBox" href="">WebApp</a>
+                            <a class="buttonBox" href="">Couriers</a>
+                        </div>
+                    </div>
                 </section>
             </section>
+
+
         </div>
 
     </section>
+    <section class="contactSection">
+        <h2 style="color:#111E41">Get in touch</h2>
+        <p style="color:#111E41">Whether you have an idea for a project or just want to chat, feel free to shoot me an
+            email!
+        </p>
+        <a class="buttonBox" href="" style="color:#111E41; background-color: #111e411f;">Say Hello</a>
+    </section>
+
     <script>
         document.addEventListener('mousemove', (event) => {
             const x = event.clientX;
@@ -167,6 +192,23 @@
             const gradientElement = document.querySelector('.gradient-bg');
             gradientElement.style.background = `radial-gradient(circle at ${x}px ${y}px, #2a2a6e48 0%, transparent 50%)`;
         });
+
+        const firstChild = document.querySelector('.first-child');
+
+        window.addEventListener('scroll', function () {
+            const rect = firstChild.getBoundingClientRect();
+
+            // Check if the first child is beyond its parent element's bottom
+            if (rect.top + rect.height <= 0) {
+                firstChild.style.position = 'absolute'; // Stop it from sticking
+                firstChild.style.top = 'auto'; // Reset the top position if necessary
+            } else {
+                firstChild.style.position = 'sticky'; // Re-enable sticky
+                firstChild.style.top = '0'; // Reset top if necessary
+            }
+        });
+
+
     </script>
 </body>
 
