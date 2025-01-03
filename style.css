@@ -277,7 +277,11 @@ strong {
 
     .itemSectionWithImage img {
         width: 100%;
+        max-width: 100%; /* Ensures the image doesn't go beyond the parent's width */
+        height: auto;    /* Maintains the aspect ratio */
+        display: block;  /* Removes any default inline spacing */
     }
+    
 
     .sectionHeading {
         font-size: 16px;
