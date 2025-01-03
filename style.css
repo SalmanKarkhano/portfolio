@@ -232,6 +232,11 @@ strong {
     font-size: 18px;
 }
 
+
+.thinText{
+    font-weight: 100;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
