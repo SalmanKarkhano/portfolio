@@ -10,6 +10,11 @@ html {
     position: relative;
 }
 
+.logo{
+    width: 40px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
 .gradient-bg {
     position: absolute;
     top: 0;
@@ -50,7 +55,6 @@ html {
     top: 0;
     align-self: flex-start;
     /* Prevent stretching */
-    padding-top: 100px;
     height: fit-content;
     /* Let it fit its content */
 }
@@ -231,6 +235,14 @@ strong {
 /* Responsive Design */
 @media (max-width: 768px) {
 
+    h1{
+        font-size: 80px;
+    }
+    
+    .logo{
+        padding:0px;
+        padding-bottom: 20px;
+    }
     .gradient-bg {
         display: none;
     }
