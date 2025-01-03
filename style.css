@@ -235,9 +235,7 @@ strong {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-    h1{
-        font-size: 80px;
-    }
+  
 
     .logo{
         padding:0px;
