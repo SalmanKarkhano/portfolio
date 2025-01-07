@@ -8,13 +8,16 @@ html {
     font-family: "Lexend", serif;
     font-optical-sizing: auto;
     position: relative;
+    scroll-behavior: smooth;
+
 }
 
-.logo{
+.logo {
     width: 40px;
     padding-top: 30px;
     padding-bottom: 70px;
 }
+
 .gradient-bg {
     position: absolute;
     top: 0;
@@ -48,6 +51,7 @@ html {
 .box {
     flex: 1;
     /* text-align: center; */
+    padding-bottom:100px;
 }
 
 .box:first-child {
@@ -159,6 +163,10 @@ a:hover {
     background-color: #ffffff;
 }
 
+.menu-item.active a {
+    color: #ffffff; /* Highlight the active menu item */
+    font-weight: bold;
+}
 strong {
     font-weight: 400;
     color: rgb(255, 255, 255, 0.9);
@@ -231,30 +239,48 @@ strong {
 }
 
 
-.thinText{
+.thinText {
     font-weight: 100;
 }
 
-.contactSection{
-    text-align: center!important;
+.contactSection {
+    text-align: center !important;
     background-color: #5DE8D2;
     color: rgba(0, 0, 0, 0.8);
     padding: 50px;
     margin-top: 50px;
 }
 
+.footerText {
+    padding-top: 200px;
+
+}
+
+.footerText a {
+    color: white;
+}
+
+.mailContainer {
+    font-size: 130px;
+    font-weight: 100;
+    padding: 100px;
+    text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
-  
 
-    .logo{
-        padding:0px;
+
+    .logo {
+        padding: 0px;
         padding-bottom: 20px;
     }
+
     .gradient-bg {
         display: none;
     }
+
     .container {
         flex-direction: column;
         width: 90%;
@@ -300,7 +326,7 @@ strong {
         border: 1px solid rgba(255, 255, 255, 0.151);
     }
 
-    .itemSectionWithImage:hover{
+    .itemSectionWithImage:hover {
         border: 1px solid #5DE8D2;
     }
 
@@ -311,11 +337,14 @@ strong {
 
     .itemSectionWithImage img {
         width: 100%;
-        max-width: 100%; /* Ensures the image doesn't go beyond the parent's width */
-        height: auto;    /* Maintains the aspect ratio */
-        display: block;  /* Removes any default inline spacing */
+        max-width: 100%;
+        /* Ensures the image doesn't go beyond the parent's width */
+        height: auto;
+        /* Maintains the aspect ratio */
+        display: block;
+        /* Removes any default inline spacing */
     }
-    
+
 
     .sectionHeading {
         font-size: 16px;
@@ -335,12 +364,4 @@ strong {
         overflow-y: auto;
         height: 100%;
     }
-}
-
-.footerText{
-    padding-top: 200px;    
-    
-}   
-.footerText a{
-    color: white;
 }

@@ -30,17 +30,17 @@
 
                 <div class="menu">
                     <div class="menu-item active">
-                        <span><a href="">About</a></span>
+                        <span><a href="#about">About</a></span>
                     </div>
                     <div class="menu-item">
-                        <span><a href="">Experience</a></span>
+                        <span><a href="#skills">What I Can Do</a></span>
                     </div>
                     <div class="menu-item">
-                        <span><a href="">Projects</a></span>
+                        <span><a href="#work">My Work</a></span>
                     </div>
                 </div>
             </div>
-            <section class="box">
+            <section class="box" id="about">
                 <section>
                     <p>
                         I’m a developer with a passion for creating intuitive, high-performing digital experiences that
@@ -74,7 +74,7 @@
                     </p>
                 </section>
                 <h2>Things I Can Do Without Googling <span class="thinText">(Mostly)</span></h2>
-                <section class="itemSection">
+                <section class="itemSection" id="skills">
                     <h3 class="sectionHeading">Build Websites That Work (and Look Great)</h3>
                     <p>From clean code to responsive design, I can whip up user-friendly web solutions with Laravel,
                         ReactJS, and WordPress.
@@ -123,7 +123,7 @@
                     <a class="buttonBox" href="">Problem Solving</a>
                     <a class="buttonBox" href="">Learning</a>
                 </section>
-                <section>
+                <section id="work">
                     <h2>My Work <span class="thinText">(What You Came Here For)</span></h2>
                     <div class="itemSectionWithImage">
                         <div><img src="images/ecolights_dashboard_thumbnail.png" alt="Image.jpg"
@@ -190,43 +190,72 @@
                     </div>
                 </section>
                 <section class="footerText">
-                    <p> 
-                        Design by <strong><a href="">Me </a></strong>offcourse in <strong><a href="">Photoshop</a> </strong>coded in <strong><a>Vscode</a> </strong>and hosted on <strong><a>github</a></strong> all text is set in the 
+                    <p>
+                        Design by <strong><a href="">Me </a></strong>offcourse in <strong><a href="">Photoshop</a>
+                        </strong>coded in <strong><a>Vscode</a> </strong>and hosted on <strong><a>github</a></strong>
+                        all text is set in the
                         <strong><a>Lexend</a></strong> typface.
                     </p>
                 </section>
             </section>
         </div>
-
+        <section>
+            <h1 class="mailContainer">hello@itssalman.online</h1>
+        </section>
     </section>
-   
+</body>
 
-    <script>
-        document.addEventListener('mousemove', (event) => {
-            const x = event.clientX;
-            const y = event.clientY;
 
-            const gradientElement = document.querySelector('.gradient-bg');
-            gradientElement.style.background = `radial-gradient(circle at ${x}px ${y}px, #2a2a6e48 0%, transparent 50%)`;
-        });
+<script>
+    document.addEventListener('mousemove', (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
 
-        const firstChild = document.querySelector('.first-child');
+        const gradientElement = document.querySelector('.gradient-bg');
+        gradientElement.style.background = `radial-gradient(circle at ${x}px ${y}px, #2a2a6e48 0%, transparent 50%)`;
+    });
 
-        window.addEventListener('scroll', function () {
-            const rect = firstChild.getBoundingClientRect();
+    const firstChild = document.querySelector('.first-child');
 
-            // Check if the first child is beyond its parent element's bottom
-            if (rect.top + rect.height <= 0) {
-                firstChild.style.position = 'absolute'; // Stop it from sticking
-                firstChild.style.top = 'auto'; // Reset the top position if necessary
-            } else {
-                firstChild.style.position = 'sticky'; // Re-enable sticky
-                firstChild.style.top = '0'; // Reset top if necessary
+    window.addEventListener('scroll', function () {
+        const rect = firstChild.getBoundingClientRect();
+
+        // Check if the first child is beyond its parent element's bottom
+        if (rect.top + rect.height <= 0) {
+            firstChild.style.position = 'absolute'; // Stop it from sticking
+            firstChild.style.top = 'auto'; // Reset the top position if necessary
+        } else {
+            firstChild.style.position = 'sticky'; // Re-enable sticky
+            firstChild.style.top = '0'; // Reset top if necessary
+        }
+    });
+
+    // Select all sections and menu items
+    const sections = document.querySelectorAll("section");
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+
+        // Loop through sections to find which is in the viewport
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 50; // Adjust for any header height
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
             }
         });
 
+        // Update active menu item
+        menuItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.querySelector("a").getAttribute("href").substring(1) === currentSection) {
+                item.classList.add("active");
+            }
+        });
+    });
 
-    </script>
-</body>
+</script>
+
 
 </html>
