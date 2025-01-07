@@ -270,8 +270,12 @@ strong {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-
-
+    .mailContainer {
+        font-size: 40px;
+        padding: 0px;;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .logo {
         padding: 0px;
         padding-bottom: 20px;
