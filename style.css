@@ -74,7 +74,6 @@ h4,
 h5,
 h6 {
     cursor: pointer;
-    text-align: left;
 }
 
 h1 {
@@ -104,7 +103,6 @@ p {
     font-size: 17px;
     font-weight: 200;
     color: rgba(255, 255, 255, 0.8);
-    text-align: left;
 }
 
 .menu {
@@ -337,4 +335,12 @@ strong {
         overflow-y: auto;
         height: 100%;
     }
+}
+
+.footerText{
+    padding-top: 200px;    
+    
+}   
+.footerText a{
+    color: white;
 }
